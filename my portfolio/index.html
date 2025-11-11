@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bulut.css"/>
+</head>
+<body>
+<header class="header">
+     <button class="hamburger" id="hamburger-btn">
+        &#9776; </button>
+    <img src="images\logom.png" alt="Logo" class="logo">
+    <span class="username">Yusuf Sarı</span>
+    <nav class="navbar-top">
+        <a href="#">Anasayfa</a>
+        <a href="#">Hakkımda</a>
+        <a href="#">İletişim</a>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // HTML'deki id'ler ile elemanları yakala
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const menu = document.getElementById('menu');
+
+            hamburgerBtn.addEventListener('click', function() {
+                // Tıklanınca menüye 'active' sınıfını ekle/kaldır
+                // CSS'teki .navbar-top.active kuralı menüyü gösterecek
+                menu.classList.toggle('active'); 
+            });
+        });
+    </script>
+</header>
+</body>
+</html>

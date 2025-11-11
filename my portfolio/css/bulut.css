@@ -1,0 +1,76 @@
+/* Ana kapsayıcıyı (header) Flexbox yapısına dönüştürerek hizalamayı sağlarız */
+.header {
+    display: flex; /* Flexbox'ı etkinleştir */
+    align-items: center; /* Tüm öğeleri (logo, span, nav) dikeyde ortala */
+    padding: 0.5%; /* Kenar boşluğu ekle (isteğe bağlı) */
+    background-color: rgba(0, 0, 0, 0.5); /* Arka plan rengi (isteğe bağlı) */
+    color: white; /* Metin rengi (isteğe bağlı) */
+}
+/* Anasayfa, Hakkımda, İletişim menüsünü sağa ittiren ana kural budur */
+.navbar-top {
+    margin-left: auto; /* Soldaki tüm boşluğu alıp menüyü en sağa iter */
+}
+/* Navigasyon bağlantılarını (Anasayfa, Hakkımda vs.) düzenleme */
+.navbar-top a {
+    color: white; /* Bağlantı rengi */
+    font-family:sans-serif;
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    margin-left: 45px; /* Menü elemanları arasına boşluk koy */
+}
+/* Logo ve kullanıcı adı için küçük düzenlemeler */
+.logo {
+    height: 80px; /* Logo boyutunu ayarla */
+    margin-right: 15px; /* Logo ile kullanıcı adı arasına boşluk koy */
+}
+ .username {
+    font-family: sans-serif;
+    font-size: 30px; 
+}
+html, body {
+    height: 100%;       /* Yüksekliği tam ekran yap */
+    width: 100%;        /* Genişliği tam ekran yap */
+    margin:  0;          /* Tarayıcının varsayılan kenar boşluklarını sıfırla */
+    padding: 0;         /* Varsayılan dolguları sıfırla */
+}
+body {
+    /* 1. Kendi görsel adınızı buraya yazın! */
+    background-image: url('background.jpeg'); 
+
+    /* 2. EN ÖNEMLİ KISIM: Görselin oranını bozmadan tüm alanı kaplamasını sağlar */
+    background-size: cover; 
+
+    /* 3. Görselin tam ortalanmasını sağlar */
+    background-position: center; 
+
+    /* 4. Görselin tekrarlanmasını engeller */
+    background-repeat: no-repeat; 
+}
+@media (max-width: 768px) {
+    .header {
+        /* Öğeleri (logo, ad, menü) dikey olarak sırala */
+        flex-direction: column; 
+    }
+    
+    .navbar-top {
+        /* Menü soldan sağa yayılsın */
+        width: 100%;
+        margin-left: 0;
+    }
+    /* Diğer stil değişiklikleri... */
+}
+/* Masaüstü Stilleri (Varsayılan) */
+.header {
+    display: flex;
+    align-items: center;
+    /* ... Diğer stiller ... */
+}
+
+/* Hamburger butonunu masaüstünde gizle */
+.hamburger {
+    display: none; 
+}
+
+/* Menü (navbar-top) varsayılan olarak sağa yaslı kalmalı */
+.navbar-top {
+    margin-left: auto; /* Masaüstünde sağa iter */
+}
